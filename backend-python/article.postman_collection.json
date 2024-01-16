@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "fcf7b71a-ca64-4bea-81b0-dc0864a34e81",
+		"name": "article",
+		"description": "/article/ (POST)  \n{  \n\"title\": \"\",  \n\"content\": \"\",  \n\"category\":\"\",  \n”status”:””  \n}\n\n/article/(limit)/(offset) (GET)\n\n/article/(id) (GET)\n\n{  \n\"title\": \"\",  \n\"content\": \"\",  \n\"category\":\"\",  \n”status”:””  \n}\n\n/article/(id) (PUT atau PATCH)  \n{  \n\"title\": \"\",  \n\"content\": \"\",  \n\"category\":\"\",  \n”status”:””  \n}\n\n/article/(id) (DELETE)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17768777"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/article/5/0"
+			},
+			"response": []
+		},
+		{
+			"name": "Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"This is a valid title with more than 20 characters\",\r\n  \"content\": \"This is a valid content with more than 200 characters. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\r\n  \"category\": \"Valid\",\r\n  \"status\": \"Publish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/article"
+			},
+			"response": []
+		},
+		{
+			"name": "Get By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/article/10"
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"This is a valid title with more than 20 characters\",\r\n  \"content\": \"This is a valid content with more than 200 characters. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\r\n  \"category\": \"Not Valid\",\r\n  \"status\": \"Draft\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/article/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:5000/article/12"
+			},
+			"response": []
+		}
+	]
+}
